@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // ✅ This replaces 'next export'
+  output: "export", // ✅ Ensures static export
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    unoptimized: true, // ✅ Ensures images work properly in static export
   },
-  generateRobotsTxt: true, // ✅ Generate robots.txt for SEO
-  siteUrl: "https://social-media-video-downloader.netlify.app", // ✅ Your site's URL
+  experimental: {
+    appDir: true, // ✅ Enables app router (if needed)
+  },
 };
 
 module.exports = nextConfig;
