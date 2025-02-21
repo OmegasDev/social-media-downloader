@@ -1,13 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // ✅ Ensures static export
-  trailingSlash: true,
+  output: "export", // ✅ Ensures static export for Netlify
+  trailingSlash: true, // ✅ Helps SEO-friendly URLs
   images: {
-    unoptimized: true, // ✅ Ensures images work properly in static export
-  },
-  experimental: {
-    appDir: true, // ✅ Enables app router (if needed)
+    unoptimized: true, // ✅ Ensures static images work
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
