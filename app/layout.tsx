@@ -13,26 +13,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Social Media Video Downloader - Fast & Free",
-  description: "Download videos from social media instantly. Fast, secure, and free video downloader for all platforms.",
-  keywords: "video downloader, social media downloader, free downloader, online video download, Facebook video download, Twitter video download",
+  title: "Social Media Video Downloader",
+  description: "Download videos from social media easily and for free.",
+  keywords: ["video downloader", "social media", "download videos", "free video downloader"],
   openGraph: {
     title: "Social Media Video Downloader",
-    description: "Fast & free social media video downloader for all platforms.",
+    description: "Download videos from social media easily and for free.",
     url: "https://social-media-video-downloader.netlify.app",
     siteName: "Social Media Video Downloader",
+    images: [
+      {
+        url: "https://social-media-video-downloader.netlify.app/preview.jpg", // Change this to a real image
+        width: 1200,
+        height: 630,
+        alt: "Preview of Social Media Video Downloader",
+      },
+    ],
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Social Media Video Downloader",
-    description: "Fast & free social media video downloader for all platforms.",
+    description: "Download videos from social media easily and for free.",
+    images: ["https://social-media-video-downloader.netlify.app/preview.jpg"], // Change this to a real image
   },
   other: {
     "google-site-verification": "mOGqK10s6XJWI8cI8bhr4p3nWkJ_g6ppbLP1iyBtrTo",
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -41,12 +49,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
   );
 }
+
 
